@@ -1,161 +1,235 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Your Paper Title | CVPR 2026</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    body {
-      font-family: 'Google Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #ffffff;
-      color: #222;
-      line-height: 1.6;
-    }
+<title>Your Paper Title | CVPR 2026</title>
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-    h1 {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
+<style>
+:root {
+  --accent: #6C63FF;
+  --text: #111;
+  --bg: #fff;
+  --card: #f7f7f9;
+}
 
-    .authors {
-      text-align: center;
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #eee;
+    --bg: #111;
+    --card: #1c1c1f;
+  }
+}
 
-    .links {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
 
-    .links a {
-      margin: 0 10px;
-      text-decoration: none;
-      padding: 8px 16px;
-      border: 1px solid #444;
-      border-radius: 6px;
-      font-size: 14px;
-      transition: 0.2s;
-    }
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px;
+}
 
-    .links a:hover {
-      background: #444;
-      color: white;
-    }
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+  text-align: center;
+  background: linear-gradient(90deg, #6C63FF, #00BFA6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-    .section {
-      margin-top: 60px;
-    }
+.subtitle {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
 
-    .section h2 {
-      font-size: 26px;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 10px;
-    }
+.authors {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 18px;
+}
 
-    img {
-      width: 100%;
-      margin: 20px 0;
-      border-radius: 8px;
-    }
+.links {
+  text-align: center;
+  margin-top: 25px;
+}
 
-    pre {
-      background: #f4f4f4;
-      padding: 15px;
-      overflow-x: auto;
-      border-radius: 6px;
-    }
+.links a {
+  display: inline-block;
+  margin: 8px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: var(--card);
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  transition: 0.2s;
+}
 
-    footer {
-      text-align: center;
-      margin-top: 60px;
-      font-size: 14px;
-      color: #777;
+.links a:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.section {
+  margin-top: 100px;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 14px;
+}
+
+img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+video {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+ul li {
+  margin-bottom: 12px;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  text-align: center;
+  margin-top: 120px;
+  opacity: 0.6;
+}
+</style>
+
+<script>
+window.addEventListener("scroll", function() {
+  document.querySelectorAll(".fade-in").forEach(function(el) {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add("visible");
     }
-  </style>
+  });
+});
+</script>
+
+<!-- MathJax -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
-
 <body>
 
 <div class="container">
 
 <h1>Your Paper Title</h1>
+<div class="subtitle">A Short, Impactful Tagline About Your Idea</div>
 
 <div class="authors">
-  Author1, Author2, Author3<br>
-  Affiliation<br>
-  <strong>CVPR 2026</strong>
+Author1*, Author2*, Author3<br>
+Affiliation<br>
+<b>CVPR 2026</b>
 </div>
 
 <div class="links">
-  <a href="#">Paper</a>
-  <a href="#">ArXiv</a>
-  <a href="#">Code</a>
-  <a href="#">BibTeX</a>
+<a href="#">Paper</a>
+<a href="#">ArXiv</a>
+<a href="#">Code</a>
+<a href="#">Poster</a>
+<a href="#">Video</a>
 </div>
 
-<img src="teaser.png" alt="Teaser">
-
-<div class="section">
-<h2>Abstract</h2>
+<div class="section fade-in">
+<h2>Overview</h2>
+<div class="card">
 <p>
-Your abstract goes here. Keep it concise and readable.
-Explain the problem, the limitation of prior work, your key idea,
-and why it matters.
+Replace this with a visually readable abstract-style overview.
+Explain the problem gap → core insight → impact.
 </p>
+<img src="teaser.png">
+</div>
 </div>
 
-<div class="section">
-<h2>Method Overview</h2>
+<div class="section fade-in">
+<h2>Method</h2>
+<div class="card">
 <p>
-Brief explanation of your framework.
-You can insert a pipeline figure here.
+You can describe your key formulation:
 </p>
-<img src="method.png" alt="Method">
+<p>
+\[
+\mathcal{L}(\theta) =
+\mathbb{E}_{x \sim \mathcal{D}} \left[ R(x) \cdot \sum_t w_t \log \pi_\theta(y_t | x) \right]
+\]
+</p>
+<img src="method.png">
+</div>
 </div>
 
-<div class="section">
+<div class="section fade-in">
 <h2>Main Contributions</h2>
+<div class="card">
 <ul>
-  <li>Contribution 1</li>
-  <li>Contribution 2</li>
-  <li>Contribution 3</li>
+<li>We identify a critical limitation in prior approaches...</li>
+<li>We propose a novel token-level credit assignment mechanism...</li>
+<li>We achieve SOTA on multiple benchmarks...</li>
 </ul>
 </div>
-
-<div class="section">
-<h2>Results</h2>
-<img src="results.png" alt="Results">
-<p>
-Short explanation of results.
-</p>
 </div>
 
-<div class="section">
-<h2>Citation</h2>
+<div class="section fade-in">
+<h2>Results</h2>
+<div class="card">
+<img src="results.png">
+<p>
+Our method consistently outperforms prior works.
+</p>
+</div>
+</div>
+
+<div class="section fade-in">
+<h2>BibTeX</h2>
+<div class="card">
 <pre>
 @inproceedings{yourname2026paper,
   title={Your Paper Title},
   author={Author1 and Author2 and Author3},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  booktitle={CVPR},
   year={2026}
 }
 </pre>
 </div>
+</div>
 
 <footer>
-  Page template inspired by modern CVPR project pages.
+Designed for CVPR 2026
 </footer>
 
 </div>
