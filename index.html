@@ -90,6 +90,10 @@ h1 {
   margin-bottom: 20px;
 }
 
+.authors sup {
+  font-size: 12px;
+}
+  
 .card {
   background: var(--card);
   padding: 30px;
@@ -152,8 +156,21 @@ window.addEventListener("scroll", function() {
 <h1>Adaptive Video Distillation: Mitigating Oversaturation and Temporal Collapse in Few-Step Generation</h1>
 
 <div class="authors">
-Yuyang You<br>
-yyyou25@stu.pku.edu.cn<br>
+Yuyang You<sup>1</sup>,
+Yongzhi Li<sup>2</sup>,
+Jiahui Li<sup>2</sup>,
+Quan Chen<sup>2</sup>,
+Peng Jiang<sup>2</sup>,
+Yadong Mu<sup>1†</sup>
+<br><br>
+
+<sup>1</sup> Peking University &nbsp;&nbsp;
+<sup>2</sup> XXX University &nbsp;&nbsp;
+<sup>3</sup> XXX Lab
+<br>
+<sup>†</sup> Corresponding Author
+<br><br>
+
 <b>CVPR 2026</b>
 </div>
 
@@ -169,6 +186,22 @@ yyyou25@stu.pku.edu.cn<br>
 We incorporate Adaptive Regression Loss and Temporal Regularization Loss into Distribution Matching Distillation (DMD) to mitigate oversaturation and low dynamism in video tasks. Furthermore, our approach enables Supervised Fine-tuning (SFT) concurrently with distillation, facilitating effective style transfer.
 </p>
 <img src="teaser.png">
+</div>
+</div>
+
+<div class="section fade-in">
+<h2>Video Results</h2>
+<div class="card">
+
+<video controls autoplay muted loop playsinline>
+  <source src="demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<p>
+Comparison between baseline DMD and our Adaptive Video Distillation.
+</p>
+
 </div>
 </div>
 
